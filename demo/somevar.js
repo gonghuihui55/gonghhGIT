@@ -8,8 +8,12 @@
  * null 只能由代码赋值
  * undefined 当我们声明时不初始化一个变量时，js会自动使用undefined 来初始化变量
  */
-var i = 1 + undefined;
-console.log(i);
+// var i = 1 + undefined;
+// console.log(i);
 
 // var i = 1 + null;
 // console.log(i);
+
+
+var a = '1' + '2';
+console.log(a);
