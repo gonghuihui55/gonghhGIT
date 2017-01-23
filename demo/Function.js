@@ -57,22 +57,79 @@
 /**
  * 回调函数
  */
-function multiplyByTwo(a,b,c) {
-    var i, ar = [];
-    for(i = 0; i < 3; i++){
-        ar[i] = arguments[i] * 2;
+// function multiplyByTwo(a,b,c) {
+//     var i, ar = [];
+//     for(i = 0; i < 3; i++){
+//         ar[i] = arguments[i] * 2;
+//     }
+//     return ar;
+// }
+//
+// function addOne(a) {
+//     return a + 1;
+// }
+// var myarr = [];
+// myarr = multiplyByTwo(10,20,30);
+// for (var j = 0; j < 3;j++){
+//     myarr[j] = addOne(myarr[j]);
+// }
+// console.log(myarr);
+//------------------------------------------------------------------------------------------------
+/**
+ * 即时函数
+ */
+// (
+//     function () {
+//         console.log('hello world!!');
+//     }
+// )();
+
+// (
+//     function (a) {
+//         console.log(a);
+//
+//     }
+// ('hello'));
+
+//--------------------------------------------------------------------------------------
+/**
+ * 返回函数
+ */
+// function a() {
+//     console.log("A");
+//       a =function () {
+//         console.log("B")
+//     };
+// };
+// var c = a();
+
+
+//----------------------------------------------------------------------------------------
+// var a = (function () {
+//     function someSetup() {
+//         var setup = 'done';
+//
+//     }
+//     function actualWork() {
+//         console.log('Worky-worky');
+//
+//     }
+//
+//     someSetup();
+//     return actualWork;
+//
+// }());
+// a();            //不知道什么情况
+
+//--------------------------------------------------------------------------------------------
+function getRGB(a) {
+     var subStr = '';
+     var subValue = 0;
+    for (var i = 1; i < a.length ; i=i+2){
+        subValue = parseInt(a.substring(i,i+2),16);
+        subStr += '' + subValue + ',';
     }
-    return ar;
-}
-
-function addOne(a) {
-    return a + 1;
-}
-var myarr = [];
-myarr = multiplyByTwo(10,20,30);
-for (var j = 0; j < 3;j++){
-    myarr[j] = addOne(myarr[j]);
-}
-console.log(myarr);
-
-
+    return subStr;
+};
+var rgb = getRGB("#00FF00");
+console.log('rgb' + '(' + rgb + ')');
