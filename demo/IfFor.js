@@ -83,17 +83,9 @@
 for (var i = 1; i < 10; i++) {
    var res = '';
     for (var j = 1; j <= i; j++) {
-        //res += ' ' + i * j;
-        res = res +  ' ' + i * j;
-        // res.toString();
-        // console.log(res);
-
-
-
+        res += ' ' +'' + j + '*' + i + '='+  i * j;
+        // res = res +  ' ' + i * j;
     }
     console.log(res);
 
 }
-
-console.log(2 + '2');
-console.log('2'+ 2);
